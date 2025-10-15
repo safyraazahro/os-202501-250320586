@@ -52,10 +52,58 @@ Sertakan screenshot hasil percobaan atau diagram:
 - Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
 - Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
 
+400-500 kata 
+Analisis: Pentingnya System Call untuk Keamanan OS dan Mekanisme Keamanan Transisi User–Kernel
+
+1. Pentingnya System Call untuk Keamanan OS
+
+System call adalah antarmuka utama antara program pengguna (user space) dan kernel dalam sistem operasi. Karena kernel memiliki hak istimewa tertinggi (privileged mode), sementara program pengguna berjalan dengan hak terbatas, semua akses ke sumber daya penting—seperti memori, berkas, perangkat keras, dan jaringan—harus melalui system call. Hal ini menjadikan system call sebagai gerbang utama keamanan (security gateway) bagi sistem operasi.
+
+Tanpa mekanisme system call yang terkontrol, program pengguna dapat langsung mengakses memori kernel atau perangkat keras, yang berpotensi menimbulkan kebocoran data, korupsi memori, atau eskalasi hak akses. Oleh karena itu, system call tidak hanya berfungsi sebagai alat komunikasi, tetapi juga sebagai lapisan pertahanan. Kernel menggunakan validasi parameter, pemeriksaan izin (permission checking), dan pengelolaan konteks untuk memastikan bahwa setiap permintaan dari user space sah dan aman untuk dijalankan.
+
+Sebagai contoh, saat aplikasi mencoba membuka file dengan system call open(), kernel memeriksa apakah proses tersebut memiliki izin membaca atau menulis pada file yang dimaksud. Jika tidak, kernel menolak permintaan tersebut dengan mengembalikan kode kesalahan seperti EACCES. Dengan cara ini, system call membantu mencegah penyalahgunaan sumber daya sistem oleh aplikasi berbahaya atau bug yang tidak disengaja.
+
+2. Keamanan dalam Transisi User–Kernel
+
+Transisi antara mode pengguna (user mode) dan mode kernel (kernel mode) merupakan titik kritis dalam keamanan sistem operasi. OS harus memastikan bahwa proses ini berlangsung aman, terisolasi, dan terkendali.
+
+Transisi dimulai ketika aplikasi memanggil system call. Biasanya, ini dilakukan melalui instruksi khusus prosesor seperti syscall (pada arsitektur x86-64) atau int 0x80 (pada sistem lama). Instruksi ini memicu trap ke kernel, menyebabkan CPU beralih dari user mode ke kernel mode, dan menjalankan fungsi system call handler yang relevan.
+
+Untuk menjaga keamanan, OS melakukan beberapa langkah:
+
+Validasi argumen: Kernel memeriksa alamat memori yang diberikan oleh proses agar tidak mengarah ke wilayah memori kernel.
+
+Isolasi konteks: Kernel memiliki ruang alamat memori sendiri yang tidak dapat diakses oleh program pengguna secara langsung.
+
+Pemulihan konteks aman: Setelah eksekusi system call selesai, kontrol dikembalikan ke user space dengan status dan register CPU yang sudah diverifikasi.
+
+Dengan pendekatan ini, sistem operasi mencegah user program melakukan eksekusi kode arbitrer di level kernel, yang dapat berakibat fatal bagi keamanan sistem.
+
+3. Contoh System Call di Linux
+
+Beberapa system call yang paling umum digunakan di Linux antara lain:
+
+read() dan write() – untuk operasi input/output pada file atau perangkat.
+
+open() dan close() – untuk membuka dan menutup file.
+
+fork() – untuk membuat proses baru.
+
+exec() – untuk mengeksekusi program lain.
+
+wait() – untuk menunggu proses anak selesai.
+
+socket(), bind(), connect() – untuk komunikasi jaringan.
+
+mmap() – untuk memetakan file atau perangkat ke memori.
+
+
 ---
 
 ## Kesimpulan
 Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+
+System call adalah elemen vital yang menjaga keseimbangan antara fungsionalitas dan keamanan sistem operasi. Melalui validasi, isolasi, dan kontrol ketat pada transisi user–kernel, OS memastikan bahwa hanya permintaan sah yang dapat dijalankan, sehingga melindungi integritas dan stabilitas sistem secara keseluruhan.
 
 ---
 
