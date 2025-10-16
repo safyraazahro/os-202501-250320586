@@ -52,9 +52,25 @@ Sertakan screenshot hasil percobaan atau diagram:
 - Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
 - Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
 
+## Tugas
+1. Hasil percobaan menunjukkan bahwa interaksi antara program dan perangkat keras selalu melalui kernel menggunakan system call, sesuai teori arsitektur OS berlapis. Kernel bertindak sebagai perantara yang mengatur akses sumber daya dan keamanan sistem.
 
-Berikut ringkasan ±500 kata mengenai perbedaan monoliths kernel, microkernel, dan layered architecture, beserta contoh OS dan analisis relevansi untuk sistem modern:
+Efisiensi dan waktu eksekusi proses dipengaruhi oleh cara kernel mengelola context switching dan interrupt handling, sesuai dengan fungsi utama kernel dalam teori sistem operasi.
 
+2. Perbedaan hasil di lingkungan OS berbeda (Linux vs Windows):
+
+Pada Linux, akses dan pemanggilan system call lebih transparan dan efisien karena arsitekturnya lebih terbuka dan modular, sedangkan pada Windows, banyak fungsi kernel dibungkus dalam API tingkat tinggi sehingga performa dan hasil pengamatan bisa tampak berbeda.
+
+Perbedaan arsitektur kernel (Linux monolitik vs Windows hibrida) menyebabkan variasi dalam penanganan proses, manajemen memori, dan performa I/O, yang dapat terlihat dari hasil pengujian waktu eksekusi atau perilaku proses di kedua sistem.
+
+
+---
+
+## Kesimpulan
+Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+
+
+## Tugas
 Perbedaan Monolithic Kernel, Microkernel, dan Layered Architecture
 1. Monolithic Kernel
 Monolithic kernel adalah arsitektur sistem operasi di mana seluruh komponen inti sistem (manajemen proses, memori, file system, driver perangkat keras, dll) dijalankan dalam satu ruang kernel. Semua layanan sistem berjalan sebagai bagian dari kernel, sehingga interaksi antar komponen sangat cepat karena tidak memerlukan komunikasi antar proses (IPC).
@@ -121,13 +137,8 @@ Monolithic kernel seperti Linux tetap populer karena performanya dan dukungan lu
 
 Microkernel banyak digunakan di sistem real-time, perangkat embedded, dan sistem yang membutuhkan keamanan tingkat tinggi (contoh: QNX di otomotif, seL4 di sistem militer). Namun, overhead komunikasi masih menjadi tantangan.
 
-Hybrid kernel (contoh: Windows NT, macOS X dengan XNU kernel) mencoba menggabungkan kecepatan monolithic dengan keamanan dan modularitas microkernel. Model ini dianggap paling praktis untuk sistem operasi desktop dan server modern.
+Hybrid kernel (contoh: Windows NT, macOS X dengan XNU kernel) mencoba menggabungkan kecepatan monolithic dengan keamanan dan modularitas microkernel. Model ini dianggap paling praktis untuk sistem operasi desktop dan server modern
 
-
----
-
-## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 Kesimpulan:
 Model yang paling relevan saat ini adalah hybrid kernel, karena menawarkan keseimbangan antara performa, stabilitas, keamanan, dan modularitas. Namun, microkernel juga semakin relevan untuk konteks khusus seperti IoT, sistem real-time, dan sistem dengan kebutuhan keamanan tinggi. Sementara itu, monolithic kernel tetap kuat di komunitas open-source, terutama karena kecepatan dan ekosistemnya
