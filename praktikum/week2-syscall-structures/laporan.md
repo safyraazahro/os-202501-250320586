@@ -52,6 +52,8 @@ Sertakan screenshot hasil percobaan atau diagram:
 - Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
 - Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
 
+
+## Tugas
 400-500 kata 
 Analisis: Pentingnya System Call untuk Keamanan OS dan Mekanisme Keamanan Transisi User–Kernel
 
