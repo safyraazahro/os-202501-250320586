@@ -13,8 +13,9 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ## Tujuan
 Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+## Tugas
+-Mengenal arsitektur sistem operasi — memahami perbedaan antara arsitektur monolithic kernel, microkernel.
+-Melatih penggunaan perintah dasar OS (misalnya Linux/Unix) untuk memahami struktur file system dan kontrol proses.
 
 ---
 
@@ -146,12 +147,46 @@ Model yang paling relevan saat ini adalah hybrid kernel, karena menawarkan kesei
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+ 
+## Tugas
+1. Tiga fungsi utama sistem operasi:
+
+-Manajemen sumber daya (Resource Management):
+Mengatur penggunaan CPU, memori, perangkat input/output, dan penyimpanan agar berjalan efisien dan adil di antara proses yang aktif.
+
+-Manajemen proses (Process Management):
+Mengatur pembuatan, penjadwalan, dan penghentian proses serta komunikasi antarproses.
+
+-Manajemen file (File Management):
+Menyediakan sistem untuk penyimpanan, pengambilan, penamaan, dan pengaturan hak akses terhadap file di media penyimpanan.
+
+2. Perbedaan antara Kernel Mode dan User Mode:
+-Kernel
+Memiliki akses penuh ke seluruh sumber daya sistem (memori, perangkat keras, dll.)
+Digunakan oleh bagian inti OS (kernel) untuk menjalankan instruksi penting.
+Kesalahan dapat menyebabkan sistem crash.
+Manajemen memori, interrupt handling, device driver.
+
+-User Mode
+Terbatas, tidak dapat langsung mengakses perangkat keras atau area memori tertentu.
+Digunakan oleh aplikasi pengguna agar sistem tetap aman dan stabil.
+Kesalahan biasanya hanya memengaruhi aplikasi yang sedang berjalan.
+Menjalankan program seperti browser, editor teks, dsb.
+
+3. Contoh OS dengan arsitektur:
+
+Monolithic Kernel:
+
+Contoh: Linux, MS-DOS, Unix tradisional (System V, BSD)
+
+Ciri: Semua layanan sistem (file system, device driver, dll.) berjalan dalam satu ruang kernel.
+
+Microkernel:
+
+Contoh: Minix, QNX, Mach (digunakan dalam macOS awal)
+
+Ciri: Hanya fungsi dasar (seperti komunikasi antarproses dan manajemen memori) yang berada di kernel; layanan lain dijalankan di user space untuk stabilitas dan modularitas.
+
 
 ---
 
