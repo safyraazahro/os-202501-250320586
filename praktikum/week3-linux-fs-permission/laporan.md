@@ -5,9 +5,9 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : [Safyra Azahro]  
+- **NIM**   : [250320586]  
+- **Kelas** : [1IDSRA]
 
 ---
 
@@ -60,12 +60,18 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
+1. [Pertanyaan 1]
+   **Perintah chmod (change mode) digunakan untuk mengubah izin akses (permissions) pada file dan direktori di sistem operasi berbasis Unix dan Linux. Izin ini menentukan siapa saja yang dapat membaca, menulis, atau menjalankan sebuah file.**
+
 2. [Pertanyaan 2]  
-   **Jawaban:**  
+   **•rwx: Pemilik file memiliki izin untuk membaca (r), menulis (w), dan menjalankan (x) file tersebut.
+   •r-x: Grup yang memiliki file tersebut memiliki izin untuk membaca (r) dan menjalankan (x), tetapi tidak memiliki izin untuk menulis (-).
+   •r--: Pengguna lain (selain pemilik dan grup) hanya memiliki izin untuk membaca (r), dan tidak memiliki izin untuk menulis (-) atau menjalankan (-).**
+   
 3. [Pertanyaan 3]  
-   **Jawaban:**  
+   **Perbedaan utama antara perintah chown dan chmod adalah fungsi yang mereka jalankan: 
+•chmod (change mode): Digunakan untuk mengubah izin akses (permissions) pada file atau direktori. Izin ini menentukan tindakan apa yang dapat dilakukan terhadap file (membaca, menulis, menjalankan).
+•chown (change owner): Digunakan untuk mengubah kepemilikan (ownership) file atau direktori. Perintah ini mengontrol siapa yang menjadi pemilik file dan grup mana yang memilikinya.**  
 
 ---
 
