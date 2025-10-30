@@ -7,7 +7,7 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ## Identitas
 - **Nama**  : [Safyra azahro]  
 - **NIM**   : [250320586]  
-- **Kelas** : [1DSRA]
+- **Kelas** : [1 IDSRA]
 
 ---
 
@@ -111,11 +111,17 @@ System call adalah elemen vital yang menjaga keseimbangan antara fungsionalitas 
 
 ## Quiz
 1. [Pertanyaan 1]  
-   **Jawaban:**  
+   **Fungsi utama system call adalah sebagai antarmuka (interface) agar program dapat meminta layanan dari kernel (inti) sistem operasi, seperti manajemen proses, manajemen file, manajemen perangkat, dan komunikasi. Ini memungkinkan aplikasi untuk mengakses sumber daya sistem secara aman dan terkontrol.**
+
 2. [Pertanyaan 2]  
-   **Jawaban:**  
+   **Empat kategori system call yang umum digunakan adalah:
+•Kontrol Proses: Meliputi pembuatan, eksekusi, dan penghentian proses. 
+•Manajemen Berkas (File Management): Meliputi operasi pada berkas seperti membuat, membaca, menulis, dan menghapus. 
+•Manajemen Perangkat (Device Management): Meliputi permintaan dan pelepasan perangkat, serta membaca dan menulis dari perangkat. 
+•Komunikasi: Meliputi pertukaran informasi antarproses atau antar komputer.**  
+
 3. [Pertanyaan 3]  
-   **Jawaban:**  
+   **Panggilan sistem (system call) tidak bisa dipanggil langsung oleh program pengguna karena alasan keamanan dan stabilitas sistem operasi.**  
 
 ---
 
