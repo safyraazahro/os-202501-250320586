@@ -5,9 +5,9 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : [Safyra Azahro]  
+- **NIM**   : [250320586]  
+- **Kelas** : [1DSRA]
 
 ---
 
@@ -61,10 +61,11 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ## Quiz
 1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
+   **Sebagai sistem pertama yang berjalan setelah kernel Linux di-boot, yang bertugas memulai, mengelola, dan menghentikan semua proses dan layanan lainnya yang diperlukan agar sistem operasi berfungsi dan berjalan. systemd sendiri adalah sistem init modern yang menggantikan sistem init lama (seperti SysVinit), menawarkan lebih banyak fleksibilitas, efisiensi, dan fitur manajemen layanan yang canggih.**
+   
+3. [Pertanyaan 2]  
+   **J**  
+4. [Pertanyaan 3]  
    **Jawaban:**  
 
 ---
