@@ -64,8 +64,9 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
    **Sebagai sistem pertama yang berjalan setelah kernel Linux di-boot, yang bertugas memulai, mengelola, dan menghentikan semua proses dan layanan lainnya yang diperlukan agar sistem operasi berfungsi dan berjalan. systemd sendiri adalah sistem init modern yang menggantikan sistem init lama (seperti SysVinit), menawarkan lebih banyak fleksibilitas, efisiensi, dan fitur manajemen layanan yang canggih.**
    
 3. [Pertanyaan 2]  
-   **J**  
-4. [Pertanyaan 3]  
+   **Perbedaan utama adalah kill menghentikan satu proses berdasarkan ID Proses (PID), sedangkan killall menghentikan semua proses yang cocok berdasarkan nama prosesnya. kill menawarkan presisi lebih tinggi untuk menargetkan satu proses, sementara killall lebih fleksibel untuk mematikan semua instance dari program tertentu secara sekaligus.**
+   
+5. [Pertanyaan 3]  
    **Jawaban:**  
 
 ---
