@@ -67,7 +67,7 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
    **Perbedaan utama adalah kill menghentikan satu proses berdasarkan ID Proses (PID), sedangkan killall menghentikan semua proses yang cocok berdasarkan nama prosesnya. kill menawarkan presisi lebih tinggi untuk menargetkan satu proses, sementara killall lebih fleksibel untuk mematikan semua instance dari program tertentu secara sekaligus.**
    
 5. [Pertanyaan 3]  
-   **Jawaban:**  
+   **User root memiliki hak istimewa di sistem Linux karena ia adalah akun administrator dengan akses tanpa batas ke semua file dan fungsi sistem, yang diperlukan untuk tugas-tugas seperti menginstal perangkat lunak, mengelola pengguna, dan mengubah konfigurasi sistem. Meskipun diperlukan untuk kelancaran operasi, hak ini membuat root sangat berbahaya jika disalahgunakan, sehingga praktik terbaik adalah membatasi penggunaan akses root secara langsung dan menggunakannya hanya saat benar-benar diperlukan melalui perintah sudo.**  
 
 ---
 
