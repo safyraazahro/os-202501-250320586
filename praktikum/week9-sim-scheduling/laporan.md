@@ -102,12 +102,9 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. **Simulasi diperlukan untuk menguji algoritma scheduling karena memungkinkan pengujian tanpa risiko pada sistem nyata, mudah mengatur berbagai skenario beban kerja, membandingkan kinerja algoritma secara adil, serta menghemat waktu dan biaya sebelum algoritma diterapkan secara langsung.**  
+2. **Simulasi: cepat, akurat, dan mampu menangani banyak data. Perhitungan manual: lambat, rawan kesalahan, dan tidak praktis. Kesimpulan: simulasi lebih efisien dan andal daripada perhitungan manual.**  
+3.  **Algoritma FCFS (First Come First Served) paling mudah diimplementasikan karena proses dijalankan sesuai urutan kedatangan tanpa perhitungan kompleks, prioritas, atau preemption. Struktur dan logikanya sederhana sehingga mudah dipahami dan diterapkan.**  
 
 ---
 
