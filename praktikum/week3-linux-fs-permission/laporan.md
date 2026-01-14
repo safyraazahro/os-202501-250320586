@@ -1,13 +1,13 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu 3
+Topik: linux fs permission
 
 ---
 
 ## Identitas
 - **Nama**  : [Safyra Azahro]  
 - **NIM**   : [250320586]  
-- **Kelas** : [1IDSRA]
+- **Kelas** : [1DSRA]
 
 ---
 
