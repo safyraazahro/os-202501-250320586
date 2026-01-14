@@ -1,5 +1,5 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu 7
 Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ---
@@ -60,12 +60,12 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. **Empat kondisi deadlock:
+Mutual exclusion, hold and wait, no preemption, circular wait.**  
+2. [Mengapa sinkronisasi diperlukan dalam sistem operasi?]  
+   **Sinkronisasi diperlukan untuk mencegah race condition dan menjaga konsistensi data.**  
+3. [Jelaskan perbedaan antara semaphore dan monitor.]  
+   **Semaphore: Mekanisme sinkronisasi berbasis counter (P/V). Monitor: Sinkronisasi tingkat tinggi, akses otomatis saling eksklusif.**  
 
 ---
 
