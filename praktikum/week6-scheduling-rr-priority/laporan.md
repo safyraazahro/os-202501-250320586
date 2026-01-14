@@ -1,13 +1,13 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu 6
+Topik:  Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Safyra azahro
+- **NIM**   : 250320586  
+- **Kelas** : 1 DSRA
 
 ---
 
@@ -60,12 +60,9 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. **Round Robin: Semua proses bergiliran dengan time quantum tetap (adil). Priority Scheduling: Proses dengan prioritas tertinggi dijalankan dulu.**  
+2. **Time quantum kecil: Respons cepat, tapi overhead context switch besar. Time quantum besar: Overhead kecil, tapi respons lambat (mendekati FCFS).**  
+3.  **Priority menyebabkan starvation karena proses berprioritas rendah terus kalah dari proses prioritas tinggi.**  
 
 ---
 
