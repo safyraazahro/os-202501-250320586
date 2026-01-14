@@ -1,13 +1,13 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu 5
+Topik: Penjadwalan CPU – FCFS dan SJF
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Safyra azahro  
+- **NIM**   : 250320586  
+- **Kelas** : 1 DSRA
 
 ---
 
@@ -60,12 +60,10 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. **FCFS: Proses dijalankan berdasarkan urutan kedatangan, sederhana tapi waktu tunggu rata-rata besar.
+SJF: Proses dijalankan berdasarkan burst time terpendek, lebih efisien dan menghasilkan waktu tunggu rata-rata lebih kecil, tapi berisiko starvation.**  
+2. **Untuk sekumpulan proses yang tersedia bersamaan, SJF terbukti optimal dalam meminimalkan average waiting time.**  
+3. **Burst time sulit diprediksi, Starvation pada proses panjang, Respons pengguna tidak adil / tidak konsisten**  
 
 ---
 
