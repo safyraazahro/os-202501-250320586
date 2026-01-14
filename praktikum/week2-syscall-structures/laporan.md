@@ -1,13 +1,13 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu 2
+Topik: Struktur System Call dan Fungsi Kernel
 
 ---
 
 ## Identitas
 - **Nama**  : [Safyra azahro]  
 - **NIM**   : [250320586]  
-- **Kelas** : [1 IDSRA]
+- **Kelas** : [1 DSRA]
 
 ---
 
