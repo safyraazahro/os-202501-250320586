@@ -5,9 +5,9 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Safyra Azahro  
+- **NIM**   : 250320586  
+- **Kelas** : 1 DSRA
 
 ---
 
@@ -60,12 +60,9 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. **FIFO (First In, First Out) dan LRU (Least Recently Used) adalah algoritma penggantian halaman dalam sistem operasi, digunakan untuk mengelola memori virtual saat terjadi page fault (ketika halaman yang dibutuhkan tidak ada di memori utama). Kedua algoritma ini bertujuan meminimalkan page fault, tetapi cara kerjanya berbeda.**  
+2. **FIFO dapat menghasilkan Belady’s Anomaly karena keputusan penggantian halaman hanya berdasarkan urutan kedatangan, bukan pola penggunaan, sehingga tidak menjamin bahwa penambahan frame akan mengurangi page fault.**  
+3. **LRU (Least Recently Used) umumnya menghasilkan performa lebih baik dibanding FIFO karena LRU selaras dengan prinsip locality of reference, sedangkan FIFO tidak.**  
 
 ---
 
