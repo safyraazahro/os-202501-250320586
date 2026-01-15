@@ -1,6 +1,6 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu 10
+Topik: Manajemen Memori – Page Replacement (FIFO & LRU)
 
 ---
 
@@ -12,9 +12,7 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+Praktikum ini bertujuan untuk memahami mekanisme page replacement pada sistem operasi serta membandingkan performa algoritma FIFO dan LRU berdasarkan jumlah page fault.
 
 ---
 
@@ -32,11 +30,61 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 ---
 
 ## Kode / Perintah
-Tuliskan potongan kode atau perintah utama:
-```bash
-uname -a
-lsmod | head
-dmesg | head
+from collections import deque
+
+def fifo_page_replacement(reference_string, frames):
+    memory = deque()
+    page_faults = 0
+
+    print("=== FIFO Page Replacement ===")
+    for page in reference_string:
+        if page not in memory:
+            page_faults += 1
+            if len(memory) == frames:
+                memory.popleft()
+            memory.append(page)
+            status = "FAULT"
+        else:
+            status = "HIT"
+        print(f"Page: {page} | Memory: {list(memory)} | {status}")
+
+    print(f"Total Page Fault (FIFO): {page_faults}\n")
+    return page_faults
+
+
+def lru_page_replacement(reference_string, frames):
+    memory = []
+    page_faults = 0
+
+    print("=== LRU Page Replacement ===")
+    for page in reference_string:
+        if page not in memory:
+            page_faults += 1
+            if len(memory) == frames:
+                memory.pop(0)
+            memory.append(page)
+            status = "FAULT"
+        else:
+            memory.remove(page)
+            memory.append(page)
+            status = "HIT"
+        print(f"Page: {page} | Memory: {memory} | {status}")
+
+    print(f"Total Page Fault (LRU): {page_faults}\n")
+    return page_faults
+
+
+if __name__ == "__main__":
+    reference_string = [7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2]
+    frames = 3
+
+    fifo_faults = fifo_page_replacement(reference_string, frames)
+    lru_faults = lru_page_replacement(reference_string, frames)
+
+    print("=== Perbandingan ===")
+    print(f"FIFO Page Faults: {fifo_faults}")
+    print(f"LRU Page Faults : {lru_faults}")
+
 ```
 
 ---
@@ -48,9 +96,14 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+| Algoritma | Jumlah Page Fault | Keterangan      |
+|---------- |------------------|------------------|
+| FIFO      | 10 | Berdasarkan urutan masuk       |
+| LRU       | 9 | Berdasarkan penggunaan terakhir | 
+
+Algoritma LRU menghasilkan page fault lebih sedikit dibanding FIFO.
+Hal ini karena LRU mempertimbangkan pola penggunaan halaman sebelumnya,
+sementara FIFO tidak memperhatikan frekuensi atau waktu akses halaman.
 
 ---
 
