@@ -1,13 +1,12 @@
 
 # Laporan Praktikum Minggu 7
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+Topik: Tugas Kelompok, Sinkronisasi Proses dan Masalah Deadlock
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama, Nim**  : Safyra Azahro (250320586),  Aulia Zahra Fatmawati (250320580),  Aisyah Nurur Rohmah (250320585)    
+- **Kelas** : 1 DSRA
 
 ---
 
