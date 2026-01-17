@@ -1,13 +1,13 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu 12
+Topik: Virtualisasi Menggunakan Virtual Machine
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Safyra Azahro 
+- **NIM**   : 250320586
+- **Kelas** : 1 DSRA
 
 ---
 
@@ -60,12 +60,12 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. Apa perbedaan antara host OS dan guest OS?  
+   **Host OS: sistem operasi utama yang berjalan langsung di hardware. Guest OS: sistem operasi yang berjalan di dalam mesin virtual (VM) di atas host OS.**  
+2. Apa peran hypervisor dalam virtualisasi? 
+   **Hypervisor mengelola dan menjalankan guest OS di atas host OS, mengalokasikan hardware, dan memastikan tiap VM berjalan terisolasi.**  
+3. Mengapa virtualisasi meningkatkan keamanan sistem? 
+   **Hypervisor mengelola dan menjalankan guest OS di atas host OS, mengalokasikan hardware, dan memastikan tiap VM berjalan terisolasi.**  
 
 ---
 
