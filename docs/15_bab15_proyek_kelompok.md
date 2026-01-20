@@ -1,128 +1,88 @@
-# Tugas Praktikum Minggu 15  
-Topik: Proyek Kelompok – Mini Simulasi Sistem Operasi (Scheduling + Memory + Container)
+# Laporan Proyek Kelompok week 15 : Mini Simulasi Sistem Operasi (Scheduling + Memory + Container)
+
+**Mata Kuliah:** Sistem Operasi
+
+**Topik:** Integrasi CPU Scheduling, Page Replacement, dan Docker Containerization
 
 ---
 
-## A. Deskripsi Singkat
-Pada pertemuan ini, mahasiswa mengerjakan **proyek kelompok** untuk mengintegrasikan materi praktikum sebelumnya menjadi satu mini-aplikasi yang **bisa didemokan dan dipresentasikan**.
+## 1. Pendahuluan
 
-Setiap kelompok membangun aplikasi berbasis terminal yang:
-1. Mensimulasikan minimal **2 konsep OS** (contoh: CPU scheduling + page replacement, atau scheduling + deadlock detection).
-2. Menyediakan input dataset sederhana dan menampilkan output berupa tabel/ringkasan metrik.
-3. Dapat dijalankan melalui **Docker** untuk memastikan reproducible environment.
+### 1.1 Latar Belakang
 
----
+Pemahaman mendalam mengenai mekanisme internal Sistem Operasi (SO) seperti penjadwalan proses dan manajemen memori seringkali sulit dicapai hanya melalui teori. Simulasi berbasis perangkat lunak menjadi sarana efektif untuk memvisualisasikan bagaimana algoritma OS bekerja dalam mengelola sumber daya terbatas secara efisien.
 
-## B. Tujuan
-Setelah menyelesaikan proyek ini, mahasiswa mampu:
-1. Bekerja kolaboratif dalam tim dengan pembagian peran yang jelas.
-2. Mengintegrasikan beberapa konsep sistem operasi dalam satu aplikasi sederhana.
-3. Mengelola proyek menggunakan Git (branch/PR/commit yang rapi).
-4. Menyusun dokumentasi dan laporan proyek yang sistematis.
-5. Melakukan presentasi dan demo hasil proyek.
+### 1.2 Tujuan
+
+* Mengintegrasikan konsep **CPU Scheduling** dan **Page Replacement** ke dalam satu aplikasi terpadu.
+* Mengimplementasikan workflow pengembangan perangkat lunak kolaboratif menggunakan Git.
+* Memastikan portabilitas aplikasi menggunakan teknologi **Docker**.
 
 ---
 
-## C. Ketentuan Teknis
-- **Kelompok:** 3–5 mahasiswa.
-- Bahasa pemrograman bebas (Python / C / Java / lainnya), aplikasi berbasis terminal.
-- Wajib menggunakan Git kolaboratif (minimal: pembagian branch per fitur dan merge terkontrol).
-- Wajib menyediakan cara jalan yang mudah (minimal `README.md` + perintah run) dan **demo via Docker**.
+## 2. Arsitektur Aplikasi
 
-Struktur folder (sesuaikan dengan template repo):
-```
-praktikum/week15-proyek-kelompok/
-├─ code/
-│  ├─ (source code proyek)
-│  ├─ Dockerfile
-│  ├─ README.md
-│  └─ data/ (opsional)
-├─ screenshots/
-│  ├─ demo_run.png
-│  └─ hasil_tabel.png
-└─ laporan.md
-```
+Aplikasi ini dirancang sebagai aplikasi berbasis terminal (CLI) dengan struktur modular. Setiap modul berfungsi secara independen namun terhubung melalui menu utama.
+
+**Alur Kerja Aplikasi:**
+
+1. **Input:** Pengguna memasukkan data melalui file CSV atau input manual.
+2. **Processing:** Data dikirim ke engine simulasi (Scheduling/Memory).
+3. **Output:** Hasil perhitungan ditampilkan dalam bentuk tabel metrik di terminal.
 
 ---
 
-## D. Spesifikasi Proyek & Langkah Pengerjaan
-### 1) Pilih Paket Fitur (wajib minimal 2 modul)
-Pilih **minimal 2 modul** berikut (boleh 3 untuk nilai tambahan analisis):
-- **Modul A – CPU Scheduling:** FCFS dan/atau SJF (non-preemptive). Output: waiting time, turnaround time, rata-rata.
-- **Modul B – Page Replacement:** FIFO dan/atau LRU. Output: page fault, hit ratio.
-- **Modul C – Deadlock Detection:** deteksi proses deadlock pada dataset (allocation/request). Output: status deadlock + daftar proses terlibat.
+## 3. Pembagian Peran dan Kontribusi
 
-### 2) Ketentuan Aplikasi
-Aplikasi minimal harus memiliki:
-1. **CLI/menu** untuk memilih modul dan parameter (mis. jumlah frame, dataset file).
-2. Input dataset dari file (CSV/TXT sederhana) + contoh dataset di repo.
-3. Output hasil dalam bentuk **tabel** (boleh ASCII table) dan ringkasan metrik.
-4. Dokumentasi penggunaan di `code/README.md`.
+Pengerjaan proyek ini dilakukan secara kolaboratif dengan pembagian peran sebagai berikut:
 
-### 3) Workflow Tim (wajib)
-- Tentukan peran minimal:
-
-  - **Project Lead/Integrator:** koordinasi, merge PR, memastikan build jalan.
-  - **Developer 1:** implementasi Modul A atau B.
-  - **Developer 2:** implementasi Modul B atau C.
-  - **Dokumentasi & QA:** uji dataset, rapikan README, siapkan screenshot.
-- Terapkan aturan Git:
-
-  - Branch per fitur (contoh: `feat/scheduling`, `feat/pagerepl`, `docs/readme`).
-  - Minimal 1 PR/merge per anggota.
-  - Commit message jelas dan konsisten.
-
-### 4) Dockerisasi
-- Buat `Dockerfile` agar aplikasi bisa dijalankan via:
-
-  - build image
-  - run container
-- Pastikan `code/README.md` memuat langkah run di host dan via Docker.
-
-### 5) Bukti Proyek
-- Minimal 2 screenshot:
-
-  - hasil running aplikasi
-  - hasil tabel/metrik (atau `docker stats` jika relevan)
+| No | Nama Anggota              | Peran                          | Kontribusi Utama                                                                                                                  |
+|----|---------------------------|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| 1  | **Safyra Azahro**          | Project Lead / Integrator      | Mengkoordinasikan tim, melakukan merge pull request, serta memastikan integrasi modul dan Docker berjalan                        |
+| 2  | **Aulia Zahra Fatmawati**  | Developer Modul A (Scheduling)| Mengimplementasikan modul CPU Scheduling (FCFS & SJF), menghitung waiting time dan turnaround time, serta menampilkan tabel hasil |
+| 3  | **Ayu Ida Nuraini**        | Developer Modul B (Memory)    | Mengimplementasikan modul Page Replacement (FIFO & LRU), menghitung page fault dan hit ratio, serta menyiapkan input dataset      |
+| 4  | **Aisyah Nurur Rohmah**    | Dokumentasi & Visualisasi     | Menyiapkan screenshot hasil running aplikasi                                                                                      |
+| 5  | **Faizatun Khasanah**      | Dokumentasi Laporan           | Menyusun dan merapikan `laporan.md` dan `README.md`, serta penulisan analisis singkat                                             |
 
 ---
 
-## E. Presentasi (Wajib)
-Setiap kelompok melakukan presentasi singkat dengan format:
-- **Durasi:** 7–10 menit presentasi + 3–5 menit tanya jawab.
-- **Materi minimal:**
+## 4. Hasil Pengujian dan Analisis
 
-  1. Latar belakang & tujuan proyek.
-  2. Arsitektur aplikasi (modul dan alur data).
-  3. Demo langsung menjalankan aplikasi (lebih baik via Docker).
-  4. Hasil pengujian (tabel/metrik) + analisis singkat.
-  5. Pembagian peran dan kontribusi tiap anggota.
+### 4.1 Modul A – CPU Scheduling
 
-### Tugas & Quiz
-#### Tugas
-1. Implementasikan proyek sesuai spesifikasi (minimal 2 modul).
-2. Sediakan dataset contoh dan dokumentasi run (`code/README.md`).
-3. Buat `Dockerfile` dan pastikan demo berjalan.
-4. Tulis laporan proyek pada `laporan.md`.
+Berdasarkan pengujian dengan algoritma **SJF (Shortest Job First)**:
 
-#### Quiz (jawab di laporan)
-1. Tantangan terbesar integrasi modul apa, dan bagaimana solusinya?
-2. Mengapa Docker membantu proses demo dan penilaian proyek?
-3. Jika dataset diperbesar 10x, modul mana yang paling terdampak performanya? Jelaskan.
+* **Total Proses:** 5
+* **Avg Waiting Time:** [Hasil] ms
+* **Avg Turnaround Time:** [Hasil] ms
+
+### 4.2 Modul B – Page Replacement
+
+Berdasarkan pengujian dengan algoritma **LRU (Least Recently Used)**:
+
+* **Jumlah Frame:** 3
+* **Total Page Faults:** [Hasil]
+* **Hit Ratio:** [Hasil]%
 
 ---
 
-## F. Output yang Diharapkan
-- Source code, `Dockerfile`, dan `README.md` di `praktikum/week15-proyek-kelompok/code/`.
-- Screenshot demo dan hasil uji di `praktikum/week15-proyek-kelompok/screenshots/`.
-- Laporan kelompok di `praktikum/week15-proyek-kelompok/laporan.md` berisi:
+## 5. Jawaban Quiz
 
-  - ringkasan proyek, arsitektur, cara menjalankan, hasil uji, analisis, kontribusi anggota.
-- Semua hasil telah di-*commit* dan siap dipresentasikan.
+**1. Tantangan terbesar integrasi modul apa, dan bagaimana solusinya?**
+Tantangan terbesar adalah menyeragamkan struktur data input. Modul Scheduling membutuhkan atribut waktu (arrival/burst), sedangkan Page Replacement membutuhkan deret referensi angka.
+
+* **Solusi:** Kami membuat modul *Data Parser* terpusat yang mampu memilah kolom CSV yang relevan untuk setiap modul secara otomatis.
+
+**2. Mengapa Docker membantu proses demo dan penilaian proyek?**
+Docker mengisolasi dependensi aplikasi (seperti versi bahasa pemrograman atau library tertentu). Dengan Docker, tim penilai tidak perlu menginstal environment di komputer mereka; cukup menjalankan perintah `docker run`, aplikasi dipastikan berjalan persis seperti di komputer pengembang.
+
+**3. Jika dataset diperbesar 10x, modul mana yang paling terdampak performanya? Jelaskan.**
+Modul **Page Replacement (terutama LRU)** akan paling terdampak. Hal ini karena setiap kali ada referensi halaman baru, algoritma harus melakukan pencarian dan pembaruan posisi pada struktur data (stack/list) untuk menentukan halaman mana yang paling lama tidak digunakan. Operasi ini memiliki kompleksitas yang meningkat seiring panjangnya barisan referensi halaman.
 
 ---
 
-## G. Referensi
-1. Silberschatz, A., Galvin, P., Gagne, G. *Operating System Concepts*, 10th Ed.
-2. Tanenbaum, A. *Modern Operating Systems*, 4th Ed.
-3. OSTEP – Scheduling / Virtual Memory / Deadlocks (sesuai modul yang dipilih).
+## 6. Penutup
+
+Proyek ini berhasil mendemonstrasikan bagaimana konsep abstrak sistem operasi dapat diwujudkan dalam kode program yang fungsional. Penggunaan Docker terbukti mempermudah distribusi aplikasi, sementara Git membantu tim bekerja secara paralel tanpa mengganggu kode satu sama lain.
+
+---
