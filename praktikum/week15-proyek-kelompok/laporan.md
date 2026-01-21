@@ -88,6 +88,7 @@ Docker membuat aplikasi dan semua kebutuhannya berjalan **terpisah dan rapi**. J
 
 **3. Jika dataset diperbesar 10x, modul mana yang paling terdampak performanya? Jelaskan.**
 Modul **Page Replacement (terutama LRU)** paling terasa dampaknya karena setiap kali ada halaman baru, sistem harus mengecek dan memperbarui daftar halaman untuk mencari mana yang paling lama tidak dipakai. Semakin panjang urutan halaman, semakin lama prosesnya.
+
 ---
 
 ## 6. Penutup
