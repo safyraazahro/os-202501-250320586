@@ -79,22 +79,17 @@ Berdasarkan pengujian dengan algoritma **LRU (Least Recently Used)**:
 ## 5. Jawaban Quiz
 
 **1. Tantangan terbesar integrasi modul apa, dan bagaimana solusinya?**
-Tantangan terbesar adalah menyeragamkan struktur data input. Modul Scheduling membutuhkan atribut waktu (arrival/burst), sedangkan Page Replacement membutuhkan deret referensi angka.
+Tantangan terbesarnya adalah menyamakan format data input.Scheduling butuh data waktu proses (arrival dan burst), sedangkan Page Replacement butuh urutan angka referensi halaman.
 
-* **Solusi:** Kami membuat modul *Data Parser* terpusat yang mampu memilah kolom CSV yang relevan untuk setiap modul secara otomatis.
-
+* **Solusi:** Solusinya adalah menggunakan format input terpisah untuk setiap modul, sehingga Scheduling membaca data waktu proses dan Page Replacement membaca deret angka sesuai kebutuhannya.
+  
 **2. Mengapa Docker membantu proses demo dan penilaian proyek?**
-Docker mengisolasi dependensi aplikasi (seperti versi bahasa pemrograman atau library tertentu). Dengan Docker, tim penilai tidak perlu menginstal environment di komputer mereka; cukup menjalankan perintah `docker run`, aplikasi dipastikan berjalan persis seperti di komputer pengembang.
+Docker membuat aplikasi dan semua kebutuhannya berjalan **terpisah dan rapi**. Jadi tim penilai tidak perlu repot menginstal apa pun; cukup jalankan perintah `docker run`, dan aplikasinya akan berjalan **sama persis** seperti di komputer pengembang.
 
 **3. Jika dataset diperbesar 10x, modul mana yang paling terdampak performanya? Jelaskan.**
-Modul **Page Replacement (terutama LRU)** akan paling terdampak. Hal ini karena setiap kali ada referensi halaman baru, algoritma harus melakukan pencarian dan pembaruan posisi pada struktur data (stack/list) untuk menentukan halaman mana yang paling lama tidak digunakan. Operasi ini memiliki kompleksitas yang meningkat seiring panjangnya barisan referensi halaman.
-
+Modul **Page Replacement (terutama LRU)** paling terasa dampaknya karena setiap kali ada halaman baru, sistem harus mengecek dan memperbarui daftar halaman untuk mencari mana yang paling lama tidak dipakai. Semakin panjang urutan halaman, semakin lama prosesnya.
 ---
 
 ## 6. Penutup
 
-Proyek ini berhasil mendemonstrasikan bagaimana konsep abstrak sistem operasi dapat diwujudkan dalam kode program yang fungsional. Penggunaan Docker terbukti mempermudah distribusi aplikasi, sementara Git membantu tim bekerja secara paralel tanpa mengganggu kode satu sama lain.
-
----
-
-**Apa ada bagian tertentu yang ingin kamu ubah, atau apakah kamu ingin saya buatkan isi file `README.md` dan `Dockerfile`-nya juga?**
+Sebagai penutup, integrasi **CPU Scheduling**, **Page Replacement**, dan **Docker Containerization** membuat sistem lebih **terstruktur, efisien, dan mudah dijalankan**. CPU Scheduling mengatur pembagian waktu proses, Page Replacement mengelola penggunaan memori secara optimal, sementara Docker memastikan aplikasi dapat dijalankan dengan lingkungan yang sama di mana pun tanpa kendala instalasi. Dengan integrasi ini, sistem menjadi lebih andal, konsisten, dan siap digunakan baik untuk pengembangan maupun penilaian.
