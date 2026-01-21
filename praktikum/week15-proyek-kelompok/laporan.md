@@ -87,7 +87,8 @@ Tantangan terbesarnya adalah menyamakan format data input.Scheduling butuh data 
 Docker membuat aplikasi dan semua kebutuhannya berjalan **terpisah dan rapi**. Jadi tim penilai tidak perlu repot menginstal apa pun; cukup jalankan perintah `docker run`, dan aplikasinya akan berjalan **sama persis** seperti di komputer pengembang.
 
 **3. Jika dataset diperbesar 10x, modul mana yang paling terdampak performanya? Jelaskan.**
-Modul **Page Replacement (terutama LRU)** paling terasa dampaknya karena setiap kali ada halaman baru, sistem harus mengecek dan memperbarui daftar halaman untuk mencari mana yang paling lama tidak dipakai. Semakin panjang urutan halaman, semakin lama prosesnya.
+Jika dataset diperbesar 10×, **modul Page Replacement (terutama algoritma LRU)** akan paling terdampak performanya. Hal ini karena setiap penambahan data berarti lebih banyak referensi halaman yang harus dicek dan diperbarui posisinya, sehingga waktu proses meningkat seiring panjangnya data. Sementara itu, CPU Scheduling dan Docker relatif lebih stabil karena tidak terlalu bergantung pada jumlah data yang diproses.
+
 ---
 
 ## 6. Penutup
