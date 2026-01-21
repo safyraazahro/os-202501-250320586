@@ -1,13 +1,13 @@
 
 # Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+Topik: Penyusunan Laporan Praktikum Format IMRAD
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Safyra Azahro  
+- **NIM**   : 250320586
+- **Kelas** : 1 DSRA
 
 ---
 
