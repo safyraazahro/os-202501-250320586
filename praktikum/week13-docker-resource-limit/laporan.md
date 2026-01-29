@@ -60,12 +60,16 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. [Mengapa container perlu dibatasi CPU dan memori?]  
+   **Karena container berbagi resource host.
+Kalau tidak dibatasi:
+Satu container bisa menghabiskan CPU/memori berlebihan, Container lain jadi lambat atau crash, Server jadi tidak stabil**  
+2. [Apa perbedaan VM dan container dalam konteks isolasi resource?]  
+   **VM lebih aman tapi berat, container lebih efisien tapi perlu pengaturan limit.**  
+3. [Apa dampak limit memori terhadap aplikasi yang boros memori?]  
+   **Kalau aplikasi pakai memori melebihi limit: Container bisa dimatikan otomatis (OOM Kill), Aplikasi crash atau restart, Performa jadi tidak stabil
+Artinya:
+Limit memori itu pengaman, tapi kalau terlalu kecil → aplikasi gagal jalan.**  
 
 ---
 
